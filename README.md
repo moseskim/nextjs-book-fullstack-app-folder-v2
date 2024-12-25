@@ -1,5 +1,5 @@
-# Next.jsアプリ
+# Next.js 애플리케이션
 
-Next.jsバージョン14（Appルーター）
+Next.js 버전 14(App 라우터)
 
-コード
+코드
