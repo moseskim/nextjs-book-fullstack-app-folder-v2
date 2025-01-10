@@ -8,8 +8,8 @@ export async function POST(request){
     try{
         await connectDB()
         await UserModel.create(reqBody)
-        return NextResponse.json({message: "ユーザー登録成功"})
+        return NextResponse.json({message: "사용자 등록 성공"})
     }catch{
-        return NextResponse.json({message: "ユーザー登録失敗"})
+        return NextResponse.json({message: "사용자 등록 실패"})
     }
 }

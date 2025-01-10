@@ -9,9 +9,9 @@ export async function POST(request){
         await connectDB()
         const savedUserData = await UserModel.findOne({email: reqBody.email}) 
         if(savedUserData){
-            // ユーザーデータが存在する場合の処理
+            // 사용자가 존재할 때의 처리
             if(reqBody.password === savedUserData.password){
-                // パスワードが正しい場合の処理
+                // 비밀번호가 올바르지 않을 때의 처리
 
                 const secretKey = new TextEncoder().encode("next-market-app-book") 
 
@@ -24,16 +24,16 @@ export async function POST(request){
                                         .setExpirationTime("1d")
                                         .sign(secretKey)
                 console.log(token) 
-                return NextResponse.json({message: "ログイン成功", token: token})
+                return NextResponse.json({message: "로그인 성공", token: token})
             }else{
-                // パスワードが間違っている場合の処理
-                return NextResponse.json({message: "ログイン失敗：パスワードが間違っています"})
+                // 비밀번호가 올바르지 않을 때의 처리
+                return NextResponse.json({message: "로그인 실패: 비밀번호가 올바르지 않습니다."})
             }
         }else{
-            // ユーザーデータが存在しない場合の処理
-            return NextResponse.json({message: "ログイン失敗：ユーザー登録をしてください"})
+            // 사용자 데이터가 존재하지 않을 때의 처리
+            return NextResponse.json({message: "로그인 실패: 사용자를 등록해 주십시오."})
         }
     }catch{
-        return NextResponse.json({message: "ログイン失敗"}) 
+        return NextResponse.json({message: "로그인 실패"}) 
     } 
 }

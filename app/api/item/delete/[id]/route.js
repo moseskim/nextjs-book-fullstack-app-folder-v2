@@ -9,11 +9,11 @@ export async function DELETE(request, context){
         const singleItem = await ItemModel.findById(context.params.id)
         if(singleItem.email === reqBody.email){
             await ItemModel.deleteOne({_id: context.params.id})
-            return NextResponse.json({message: "アイテム削除成功"})
+            return NextResponse.json({message: "아이템 삭제 성공"})
         }else{
-            return NextResponse.json({message: "他の人が作成したアイテムです"})
+            return NextResponse.json({message: "다른 사용자가 작성한 아이템입니다."})
         }
     }catch{
-        return NextResponse.json({message: "アイテム削除失敗"})
+        return NextResponse.json({message: "아이템 삭제 성공"})
     }
 }
