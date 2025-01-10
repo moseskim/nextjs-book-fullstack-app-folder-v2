@@ -7,8 +7,8 @@ export async function PUT(request, context){
     try{
         await connectDB()
         await ItemModel.updateOne({_id: context.params.id}, reqBody)
-        return NextResponse.json({message: "アイテム編集成功"})
+        return NextResponse.json({message: "아이템 수정 성공"})
     }catch{
-        return NextResponse.json({message: "アイテム編集失敗"})
+        return NextResponse.json({message: "아이템 수정 실패"})
     }
 }
