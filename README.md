@@ -1,5 +1,5 @@
-# Next.jsアプリ
+# Next.js 애플리케이션
 
-Next.jsバージョン14（Appルーター）
+Next.js 버전 14(App 라우터)
 
-Chapter 6（第6章）完了時点のコードです。
+Chapter 6(6장) 완료 시점 코드입니다.
