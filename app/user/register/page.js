@@ -24,18 +24,18 @@ const Register = () => {
             const jsonData = await response.json() 
             alert(jsonData.message) 
         }catch{
-            alert("ユーザー登録失敗") 
+            alert("사용자 등록 실패") 
         }
     }
 
     return (
         <div>
-            <h1>ユーザー登録</h1>
+            <h1>사용자 등록</h1>
             <form onSubmit={handleSubmit}>
                 <input value={name} onChange={(e) => setName(e.target.value)} type="text" name="name" placeholder="名前" required/> 
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" name="email" placeholder="メールアドレス" required/>
                 <input value={password} onChange={(e) => setPassword(e.target.value)} type="text" name="password" placeholder="パスワード" required/>
-                <button>登録</button>
+                <button>등록</button>
             </form> 
         </div>
     )
