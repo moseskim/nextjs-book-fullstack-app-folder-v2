@@ -49,7 +49,7 @@ const DeleteItem = (context) => {
             router.push("/") 
             router.refresh()
         }catch{
-            alert("アイテム削除失敗") 
+            alert("아이템 삭제 실패") 
         }
     }
 
@@ -57,23 +57,23 @@ const DeleteItem = (context) => {
         if(loginUserEmail === email){ 
             return (
                 <div>
-                    <title>削除ページ</title>     
-                    <meta name="description" content="削除ページです"/>
-                    <h1 className="page-title">アイテム削除</h1>
+                    <title>삭제 페이지</title>     
+                    <meta name="description" content="삭제 페이지입니다."/>
+                    <h1 className="page-title">아이템 삭제</h1>
                     <form onSubmit={handleSubmit}>
                         <h2>{title}</h2>
                         <Image src={image} width={750} height={500} alt="item-image" priority/>
                         <h3>¥{price}</h3>
                         <p>{description}</p>
-                        <button>削除</button>
+                        <button>삭제</button>
                     </form>
                 </div>
             )   
         }else{                 
-            return <h1>権限がありません</h1> 
+            return <h1>권한이 없습니다.</h1> 
         }     
     }else{                     
-        return <h1>ローディング中...</h1>     
+        return <h1>로딩 중...</h1>     
     }   
 }
 

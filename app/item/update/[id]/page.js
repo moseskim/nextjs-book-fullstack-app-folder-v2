@@ -52,7 +52,7 @@ const UpdateItem = (context) => {
             router.push("/") 
             router.refresh()
         }catch{
-            alert("アイテム編集失敗") 
+            alert("아이템 수정 실패") 
         }
     }
 
@@ -60,23 +60,23 @@ const UpdateItem = (context) => {
         if(loginUserEmail === email){ 
             return (
                 <div>
-                    <title>編集ページ</title>     
-                    <meta name="description" content="編集ページです"/>
-                    <h1 className="page-title">アイテム編集</h1>
+                    <title>수정 페이지</title>     
+                    <meta name="description" content="수정 페이지입니다."/>
+                    <h1 className="page-title">아이템 수정</h1>
                     <form onSubmit={handleSubmit}>
-                        <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" name="title" placeholder="アイテム名" required/>
-                        <input value={price} onChange={(e) => setPrice(e.target.value)} type="text" name="price" placeholder="価格" required/>
-                        <input value={image} onChange={(e) => setImage(e.target.value)} type="text" name="image" placeholder="画像" required/>
-                        <textarea value={description} onChange={(e) => setDescription(e.target.value)} name="description" rows={15} placeholder="商品説明" required></textarea>
-                        <button>編集</button>
+                        <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" name="title" placeholder="아이템명" required/>
+                        <input value={price} onChange={(e) => setPrice(e.target.value)} type="text" name="price" placeholder="가격" required/>
+                        <input value={image} onChange={(e) => setImage(e.target.value)} type="text" name="image" placeholder="이미지" required/>
+                        <textarea value={description} onChange={(e) => setDescription(e.target.value)} name="description" rows={15} placeholder="상품 설명" required></textarea>
+                        <button>수정</button>
                     </form>
                 </div>
             )
         }else{                            
-            return <h1>権限がありません</h1>  
+            return <h1>권한이 없습니다.</h1>  
         }  
     }else{                          
-        return <h1>ローディング中...</h1> 
+        return <h1>로딩 중...</h1> 
     }   
 }
 
