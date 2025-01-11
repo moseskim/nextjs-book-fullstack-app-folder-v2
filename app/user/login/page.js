@@ -23,19 +23,19 @@ const Login = () => {
             localStorage.setItem("token", jsonData.token) 
             alert(jsonData.message) 
         }catch{
-            alert("ログイン失敗")
+            alert("로그인 실패")
         }
     }
     
     return (
         <div>
-            <title>ログインページ</title>     
-            <meta name="description" content="ログインページです"/>
-            <h1 className="page-title">ログイン</h1>
+            <title>로그인 페이지</title>     
+            <meta name="description" content="로그인 페이지입니다."/>
+            <h1 className="page-title">로그인</h1>
             <form onSubmit={handleSubmit}>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" name="email" placeholder="メールアドレス" required/>
-                <input value={password} onChange={(e) => setPassword(e.target.value)} type="text" name="password" placeholder="パスワード" required/>
-                <button>ログイン</button>
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" name="email" placeholder="메일 주소" required/>
+                <input value={password} onChange={(e) => setPassword(e.target.value)} type="text" name="password" placeholder="비밀번호" required/>
+                <button>로그인</button>
             </form>
         </div>
     )

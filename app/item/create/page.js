@@ -36,23 +36,23 @@ const CreateItem = () => {
             router.push("/") 
             router.refresh()
         }catch{
-            alert("アイテム作成失敗") 
+            alert("아이템 작성 실패") 
         }
     }
 
     if(loginUserEmail){
         return (
             <div>
-                <title>作成ページ</title>     
-                <meta name="description" content="作成ページです"/>
-                <h1 className="page-title">アイテム作成</h1>
+                <title>작성 페이지</title>     
+                <meta name="description" content="작성 페이지입니다."/>
+                <h1 className="page-title">아이템 작성</h1>
                 <ImgInput setImage={setImage}/>
                 <form onSubmit={handleSubmit}>
-                    <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" name="title" placeholder="アイテム名" required/>
-                    <input value={price} onChange={(e) => setPrice(e.target.value)} type="text" name="price" placeholder="価格" required/>
-                    <input value={image} onChange={(e) => setImage(e.target.value)} type="text" name="image" placeholder="画像" required/>
-                    <textarea value={description} onChange={(e) => setDescription(e.target.value)} name="description" rows={15} placeholder="商品説明" required></textarea>
-                    <button>作成</button>
+                    <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" name="title" placeholder="아이템명" required/>
+                    <input value={price} onChange={(e) => setPrice(e.target.value)} type="text" name="price" placeholder="가격" required/>
+                    <input value={image} onChange={(e) => setImage(e.target.value)} type="text" name="image" placeholder="이미지" required/>
+                    <textarea value={description} onChange={(e) => setDescription(e.target.value)} name="description" rows={15} placeholder="상품 설명" required></textarea>
+                    <button>작성</button>
                 </form>
             </div>
         )

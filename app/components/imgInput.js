@@ -12,15 +12,15 @@ const ImgInput = (props) => {
             const response= await fetch("https://api.cloudinary.com/v1_1/6fs9n32/image/upload", {method: "POST", body: data})
             const jsonData = await response.json()
             await props.setImage(jsonData.url)
-            alert("画像アップロード成功")
+            alert("이미지 업로드 성공")
         }catch{
-            alert("画像アップロード失敗")
+            alert("이미지 업로드 실패")
         }
     }
     return (
         <div className="img-input">
             <input type="file" onChange={(e)=> setImageFile(e.target.files[0])} accept="image/png, image/jpg"/>
-            <button onClick={handleClick} disabled={!imageFile}>画像Upload</button>
+            <button onClick={handleClick} disabled={!imageFile}>이미지 업로드</button>
         </div>
     )
 }

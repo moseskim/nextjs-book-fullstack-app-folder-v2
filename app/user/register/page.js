@@ -24,20 +24,20 @@ const Register = () => {
             const jsonData = await response.json() 
             alert(jsonData.message) 
         }catch{
-            alert("ユーザー登録失敗") 
+            alert("사용자 등록 실패") 
         }
     }
 
     return (
         <div>
-            <title>登録ページ</title>     
-            <meta name="description" content="登録ページです"/>
-            <h1 className="page-title">ユーザー登録</h1>
+            <title>등록 페이지</title>     
+            <meta name="description" content="등록 페이지입니다."/>
+            <h1 className="page-title">사용자 등록</h1>
             <form onSubmit={handleSubmit}>
-                <input value={name} onChange={(e) => setName(e.target.value)} type="text" name="name" placeholder="名前" required/> 
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" name="email" placeholder="メールアドレス" required/>
-                <input value={password} onChange={(e) => setPassword(e.target.value)} type="text" name="password" placeholder="パスワード" required/>
-                <button>登録</button>
+                <input value={name} onChange={(e) => setName(e.target.value)} type="text" name="name" placeholder="이름" required/> 
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" name="email" placeholder="메일 주소" required/>
+                <input value={password} onChange={(e) => setPassword(e.target.value)} type="text" name="password" placeholder="비밀번호" required/>
+                <button>등록</button>
             </form> 
         </div>
     )
