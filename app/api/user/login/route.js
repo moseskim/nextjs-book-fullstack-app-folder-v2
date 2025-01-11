@@ -11,7 +11,7 @@ export async function POST(request){
         if(savedUserData){
             // 사용자가 존재할 때의 처리
             if(reqBody.password === savedUserData.password){
-                // 비밀번호가 올바르지 않을 때의 처리
+                // 비밀번호가 올바를 때의 처리
 
                 const secretKey = new TextEncoder().encode("next-market-app-book") 
 
