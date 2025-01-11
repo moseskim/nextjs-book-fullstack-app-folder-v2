@@ -50,20 +50,20 @@ const UpdateItem = (context) => {
             router.push("/") 
             router.refresh()
         }catch{
-            alert("アイテム編集失敗") 
+            alert("아이템 수정 실패") 
         }
     }
 
     if(loginUserEmail === email){ 
         return (
             <div>
-                <h1 className="page-title">アイテム編集</h1>
+                <h1 className="page-title">아이템 수정</h1>
                 <form onSubmit={handleSubmit}>
-                    <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" name="title" placeholder="アイテム名" required/>
-                    <input value={price} onChange={(e) => setPrice(e.target.value)} type="text" name="price" placeholder="価格" required/>
-                    <input value={image} onChange={(e) => setImage(e.target.value)} type="text" name="image" placeholder="画像" required/>
-                    <textarea value={description} onChange={(e) => setDescription(e.target.value)} name="description" rows={15} placeholder="商品説明" required></textarea>
-                    <button>編集</button>
+                    <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" name="title" placeholder="아이템명" required/>
+                    <input value={price} onChange={(e) => setPrice(e.target.value)} type="text" name="price" placeholder="가격" required/>
+                    <input value={image} onChange={(e) => setImage(e.target.value)} type="text" name="image" placeholder="이미지" required/>
+                    <textarea value={description} onChange={(e) => setDescription(e.target.value)} name="description" rows={15} placeholder="상품 설명" required></textarea>
+                    <button>수정</button>
                 </form>
             </div>
         )

@@ -21,8 +21,8 @@ const ReadSingleItem = async(context) => {
                 <hr/>
                 <p>{singleItem.description}</p>
                 <div>
-                    <Link href={`/item/update/${singleItem._id}`}>アイテム編集</Link>
-                    <Link href={`/item/delete/${singleItem._id}`}>アイテム削除</Link>
+                    <Link href={`/item/update/${singleItem._id}`}>아이템 수정</Link>
+                    <Link href={`/item/delete/${singleItem._id}`}>아이템 삭제</Link>
                 </div>
             </div>
         </div>
