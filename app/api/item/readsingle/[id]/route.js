@@ -6,8 +6,8 @@ export async function GET(request, context){
     try{
         await connectDB()
         const singleItem = await ItemModel.findById(context.params.id)
-        return NextResponse.json({message: "アイテム読み取り成功（シングル）", singleItem: singleItem})
+        return NextResponse.json({message: "아이템 읽기 성공(하나)", singleItem: singleItem})
     }catch{
-        return NextResponse.json({message: "アイテム読み取り失敗（シングル）"})
+        return NextResponse.json({message: "아이템 읽기 실패(하나)"})
     }
 }

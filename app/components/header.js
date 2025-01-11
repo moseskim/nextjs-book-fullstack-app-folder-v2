@@ -11,9 +11,9 @@ const Header = () => {
             </div>
             <nav>
                 <ul>
-                    <li><Link href="/user/register">登録</Link></li>
-                    <li><Link href="/user/login">ログイン</Link></li>
-                    <li><Link href="/item/create">アイテム作成</Link></li>
+                    <li><Link href="/user/register">등록</Link></li>
+                    <li><Link href="/user/login">로그인</Link></li>
+                    <li><Link href="/item/create">아이템 작성</Link></li>
                 </ul>
             </nav>
         </header>
